@@ -1,5 +1,6 @@
 # coalMinesUSA
 Author: Ritchie Katko
+
 The goal of this map is to compare 2 datasets thematically (coal beds and coal mines in the USA).  Data is publicly available.  
 Map features:
 popup functionality on all features
