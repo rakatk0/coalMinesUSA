@@ -8,4 +8,6 @@ This is the final project for MAP 672.
 
 https://www.eia.gov/maps/layer_info-m.php
 
+https://www.eia.gov/coal/annual/pdf/table3.pdf
+
 https://pubs.usgs.gov/of/2012/1205/
