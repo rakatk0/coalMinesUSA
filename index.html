@@ -10,7 +10,122 @@
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
   <style>
-    body {
+    /* source css */
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Lato, sans-serif;
+			color: #3d3d3d;
+		}
+		h1 {
+			position: absolute;
+			margin-top: 0;
+			top: 10px;
+			left: 15px;
+			font-size: 2em;
+			font-family: Merriweather, serif;
+			letter-spacing: .04em;
+			padding: 10px 15px;
+			background: rgba(256, 256, 256, .7);
+			/* border: 1px solid grey; */
+			border-radius: 5px;
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			z-index: 800;
+		}
+		h2 {
+			font-family: Merriweather, serif;
+			font-size: 1.3em;
+			letter-spacing: .04em;
+		}
+
+		#map {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			border-style: inset;
+			border-color: gold;
+			border-width: thin;
+			border-top-color: skyblue;
+			border-right-color: skyblue;
+		}
+
+		#about {
+			position: absolute;
+			bottom: 20px;
+			left: 15px;
+			width: 250px;
+			padding: 0 15px;
+			background: rgba(256, 256, 256, .7);
+			/* border: 1px solid; */
+			border-radius: 5px;
+			z-index: 800;
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+		}
+
+		#title {
+			position: relative;
+			margin-top: 0;
+			top: 10px;
+			left: 15px;
+			z-index: 800;
+		}
+
+		#about h2 {
+			margin: 6px 0 0;
+		}
+
+		#about ul {
+			padding-left: 15px;
+			font-size: .9em;
+			line-height: 1.5em;
+		}
+
+		p {
+			font-size: .9em;
+			line-height: 1.5em;
+		}
+		a {
+			color: #005daa;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+
+		.legend {
+        padding: 6px 8px;
+				font-style: italic;
+				font-weight: bold;
+				text-shadow: 2px 2px 2px #d3d3d3;
+        background: rgba(255,255,255,0.7);
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
+    .legend label {
+        font-size: 1.2em;
+				font-style: italic bold;
+    }
+    .legend label:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+		.toolTipCSS {
+			min-width: 200px;
+			max-width: 300px;
+			display: inline-block;
+			white-space: normal;
+		}
+
+		.toolTipCSS h3 {
+			font-size: 1.2em;
+			font-family: Merriweather, serif;
+			margin-bottom:0px;
+		}
+
+    /* body {
       margin: 0;
       padding: 0;
       background: whitesmoke;
@@ -35,12 +150,16 @@
     }
 
     #map {
-      width: 80%;
-      height: 540px;
-      margin: 10px 10%;
-      background: whitesmoke;
-      border: 2px solid #dddedf;
-    }
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			/* border-style: inset;
+			border-color: gold;
+			border-width: thin;
+			border-top-color: skyblue;
+			border-right-color: skyblue;
+		}
 
     footer {
       padding: 6px 10%;
@@ -76,27 +195,36 @@
     .legend label:after {
       content: '';
       display: block;
-      clear: both;
+      clear: both;*/
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Rental Rates by County</h1>
-    <h2>MAP672_LAB09</h2>
+    <h1>Coal Mines</h1>
+    <h2>Across the US in 2016</h2>
   </header>
 
   <div id='map'></div>
+  <section id="about">
+      <h2>About this map</h2>
+  		<p>This is a map about coal.</p>
+  		<p>Using publicly available EIA & USGS data <a href="https://brucehaupt.github.io/my-final-project-repo/">EIA data</a> that I created in June 2018.</p>
 
+
+      <h2>Map by Ritchie Katko</h2>
+      <ul>
+        <li>See my projects on GitHub: <a href="https://github.com/rakatk0" target="_blank">rakatk0</a></li>
+        <li>Follow me on twitter: <a href="https://twitter.com/brucehaupt" target="_blank">@ritchiekatko</a></li>
+        <li>Check out my <a href="http://www.mappery.com/map-of/Prospect1-New-Orleans-Biennial-Art-Map" target="_blank">Prospect 1 Map</a></li>
+      </ul>
+
+    </section>
   <footer>
     <p>Map authored by Ritchie Katko</p>
-    <p>Map produced for MAP672 Module 9 Lab.  Fall 2018</p>
-    <p>This map data file produced by joining data downloaded from
-      American FactFinder with US county polygons downloaded from
-      the US Census Cartographic Boundary Shapefiles.<br>
-      Map created using LeafletJS.
-    </p>
+    <p>Map produced for MAP 672 Final Project - Fall 2018</p>
+    <p>lorem ipsum</p>
   </footer>
 
 
@@ -110,49 +238,88 @@
   // instantiate leaflet map
   var options = {
     center: [39.82, -98.57],
-    zoom: 4.7,
+    zoom: 5.7,
     zoomSnap: .1,
     zoomControl: false
   }
   var map = L.map('map', options);
 
+  // basemap
+  var tiles = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map)
+
   // add zoom controls to right side of map
   map.addControl( L.control.zoom({ position: 'topright' }));
 
-// global variables
-  var rentalValue = "RENT",
-    countyValue = "NAME";
+// // global variables
+//   var rentalValue = "RENT",
+//     countyValue = "NAME";
 
 // load geoJson and draw map using jQuery's getJSON() method
 // load data into the document using jQuery's getJSON() method
-$.getJSON("data/counties_median_rent_2015.json", function(data) {
+$.getJSON("data/allMinesUSA.geoJSON", function(data) {
 
-      var dataLayer = L.geoJson(data, {
-      style: function(feature) {
-      return {
-        color: '#ffffff',
-        weight: .5,
-        fillOpacity: 1,
-        fillColor: '#1f78b4'
-      };
-    },
-      onEachFeature: function(feature, layer) {
-        var props = layer.feature.properties;
-        var popup = "<b>" + props[countyValue] + " County</b><br>" +
-          "<b>Average Rent: $" + props[rentalValue];
-        layer.bindTooltip(popup)
-    }
-    }).addTo(map);
+    // you need to know what the min value is,
+        // calculated at runtime or prior
+        var minValue = 8;
 
-    // call to new function here gets the data out of the
-    // callback function
-    drawMap(dataLayer);
+        //  minimum desired radius size of circles
+        var minRadius = 4;
+
+        var minesLayer =   L.geoJson(data, {
+            pointToLayer: function(feature, ll){
+                return L.circleMarker(ll, {
+                    color: '#ff7900',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#ff7900',
+                    fillOpacity: .6,
+                    //radius: 10
+                    radius: calcRadius(feature.properties.tot_prod)
+                });
+            }
+          //   onEachFeature: function(feature, layer) {
+          //     //call tooltip function
+          //     layer.bindPopup(getTooltip(feature, layer));
+          //
+          //     // add ui feedback when hovering over points
+          //     layer.on('mouseover', function() {
+          //       layer.setStyle({
+          //         color: '#ef9847',
+          //         fillColor: '#efc847'
+          //       });
+          //     });
+          //     layer.on('mouseout', function() {
+          //       layer.setStyle({
+          //         color: '#3a5e96',
+          //         fillColor: '#5583cc'
+          //       });
+          //     });
+          //
+          //   }
+          // }
+
+        }).addTo(map);
+
+            // call to new function here gets the data out of the
+            // callback function
+            drawMap(dataLayer);
+
+
+            // Radius formula
+
+            function getRadius (tot_prod) {
+            	var radius = (tot_prod * 3) + 4;
+            	return radius;
+
+
 
 
     // declare and define drawMap function outside getJSON functions callback function.
       function drawMap(dataLayer) {
 
-        var breaks = getClassBreaks(dataLayer);
 
         dataLayer.eachLayer(function(layer) {
 
@@ -166,132 +333,132 @@ $.getJSON("data/counties_median_rent_2015.json", function(data) {
         drawLegend(breaks);
     }
 
-    // determine classBreaks
-
-    function getClassBreaks(dataLayer) {
-
-      // create empty Array for storing values
-      var values = [];
-
-      // loop through all the counties
-      dataLayer.eachLayer(function(layer) {
-        var props = layer.feature.properties;
-        var value = props[rentalValue];
-        if(value != null) { values.push(value) };
-      });
-
-      // determine similar clusters
-      var clusters = ss.ckmeans(values, 5);
-
-      // create an array of the lowest value within each cluster
-      var breaks = clusters.map(function(cluster){
-        return [cluster[0],cluster.pop()];
-      });
-    console.log(breaks);
-      return breaks; // return Array of class breaks
-    }
-    // END getClassBreaks DEFINITION
-
-    // DEFINE getColor
-
-    // function getColor(d, breaks) {
-    //
-    //   if(d <= breaks[0][1]) { // less than $599
-    //         return '#f1eef6';
-    //     } else if(d <= breaks[1][1]) { // less than $740
-    //         return '#bdc9e1';
-    //     } else if(d <= breaks[2][1]) { // // less than $926
-    //         return '#74a9cf';
-    //     } else if(d <= breaks[3][1]) {  // less than $1220
-    //         return '#2b8cbe'
-    //     } else if(d <= breaks[4][1]) { // less than $1827
-    //         return '#045a8d'
-    //     }
-    // } // END getColor
-
-// HARD CODED breaks values to get it to work
-// not sure what the issue was...problematic code above
-// hard coded solution below
-
-      function getColor(d) {
-
-        if(d <= 599) { // less than $599
-              return '#f1eef6';
-          } else if(d <= 740) { // less than $740
-              return '#bdc9e1';
-          } else if(d <= 926) { // // less than $926
-              return '#74a9cf';
-          } else if(d <= 1220) {  // less than $1220
-              return '#2b8cbe'
-          } else if(d <= 1827) { // less than $1827
-              return '#045a8d'
-          }
-      } // END getColor
-
-    // LEGEND BELOW
-
-    function drawLegend(breaks){
-
-        // create a new Leaflet control object, and position it top left
-        var legend = L.control({position: 'topleft'});
-
-        // when the legend is added to the map
-        legend.onAdd = function () {
-
-            // create a new HTML <div> element and give it a class name of "legend"
-            var div = L.DomUtil.create('div', 'legend');
-
-            // first append an <h3> tag to the div holding the current attribute
-            // and norm values (i.e., the mapped phenomena)
-            div.innerHTML = "<h3>" + "Average Rental Price" + "</h3>";
-
-            // for each of our breaks
-            for (var i = 0; i < breaks.length; i++) {
-
-                // determine the color associated with each break value,
-                // including the lower range value
-                var color = getColor(breaks[i][0], breaks);
-                console.log(color);
-
-                // concatenate a <span> tag styled with the color and the range values
-                // of that class and include a label with the low and a high ends of that class range
-                div.innerHTML +=
-                    '<span style="background:' + color + '"></span> ' +
-                    '<label>$'+(breaks[i][0]).toLocaleString() + ' &mdash; ' +
-                    (breaks[i][1]).toLocaleString() + '</label>';
-            }
-
-            // return the populated div to be added to the map
-            return div;
-        };
-
-        // add the legend to the map
-        legend.addTo(map);
-    }
-
-    dataLayer.eachLayer(function(layer) {
-
-      var props = layer.feature.properties;
-
-      layer.setStyle({
-        fillColor: getColor(props[rentalValue], breaks)
-      });
-
-    });
-    drawLegend(breaks);
-
-
-    // legend above
-
-
-    // // POPUP CONSTRUCTION
-    // // basic popup style
-    //
-    //     var commonStyles = {
-    //       weight: 1,
-    //       stroke: 1,
-    //       fillOpacity: .8
-    //     }
+//     // determine classBreaks
+//
+//     function getClassBreaks(dataLayer) {
+//
+//       // create empty Array for storing values
+//       var values = [];
+//
+//       // loop through all the counties
+//       dataLayer.eachLayer(function(layer) {
+//         var props = layer.feature.properties;
+//         var value = props[rentalValue];
+//         if(value != null) { values.push(value) };
+//       });
+//
+//       // determine similar clusters
+//       var clusters = ss.ckmeans(values, 5);
+//
+//       // create an array of the lowest value within each cluster
+//       var breaks = clusters.map(function(cluster){
+//         return [cluster[0],cluster.pop()];
+//       });
+//     console.log(breaks);
+//       return breaks; // return Array of class breaks
+//     }
+//     // END getClassBreaks DEFINITION
+//
+//     // DEFINE getColor
+//
+//     // function getColor(d, breaks) {
+//     //
+//     //   if(d <= breaks[0][1]) { // less than $599
+//     //         return '#f1eef6';
+//     //     } else if(d <= breaks[1][1]) { // less than $740
+//     //         return '#bdc9e1';
+//     //     } else if(d <= breaks[2][1]) { // // less than $926
+//     //         return '#74a9cf';
+//     //     } else if(d <= breaks[3][1]) {  // less than $1220
+//     //         return '#2b8cbe'
+//     //     } else if(d <= breaks[4][1]) { // less than $1827
+//     //         return '#045a8d'
+//     //     }
+//     // } // END getColor
+//
+// // HARD CODED breaks values to get it to work
+// // not sure what the issue was...problematic code above
+// // hard coded solution below
+//
+//       function getColor(d) {
+//
+//         if(d <= 599) { // less than $599
+//               return '#f1eef6';
+//           } else if(d <= 740) { // less than $740
+//               return '#bdc9e1';
+//           } else if(d <= 926) { // // less than $926
+//               return '#74a9cf';
+//           } else if(d <= 1220) {  // less than $1220
+//               return '#2b8cbe'
+//           } else if(d <= 1827) { // less than $1827
+//               return '#045a8d'
+//           }
+//       } // END getColor
+//
+//     // LEGEND BELOW
+//
+//     function drawLegend(breaks){
+//
+//         // create a new Leaflet control object, and position it top left
+//         var legend = L.control({position: 'topleft'});
+//
+//         // when the legend is added to the map
+//         legend.onAdd = function () {
+//
+//             // create a new HTML <div> element and give it a class name of "legend"
+//             var div = L.DomUtil.create('div', 'legend');
+//
+//             // first append an <h3> tag to the div holding the current attribute
+//             // and norm values (i.e., the mapped phenomena)
+//             div.innerHTML = "<h3>" + "Average Rental Price" + "</h3>";
+//
+//             // for each of our breaks
+//             for (var i = 0; i < breaks.length; i++) {
+//
+//                 // determine the color associated with each break value,
+//                 // including the lower range value
+//                 var color = getColor(breaks[i][0], breaks);
+//                 console.log(color);
+//
+//                 // concatenate a <span> tag styled with the color and the range values
+//                 // of that class and include a label with the low and a high ends of that class range
+//                 div.innerHTML +=
+//                     '<span style="background:' + color + '"></span> ' +
+//                     '<label>$'+(breaks[i][0]).toLocaleString() + ' &mdash; ' +
+//                     (breaks[i][1]).toLocaleString() + '</label>';
+//             }
+//
+//             // return the populated div to be added to the map
+//             return div;
+//         };
+//
+//         // add the legend to the map
+//         legend.addTo(map);
+//     }
+//
+//     dataLayer.eachLayer(function(layer) {
+//
+//       var props = layer.feature.properties;
+//
+//       layer.setStyle({
+//         fillColor: getColor(props[rentalValue], breaks)
+//       });
+//
+//     });
+//     drawLegend(breaks);
+//
+//
+//     // legend above
+//
+//
+//     // // POPUP CONSTRUCTION
+//     // // basic popup style
+//     //
+//     //     var commonStyles = {
+//     //       weight: 1,
+//     //       stroke: 1,
+//     //       fillOpacity: .8
+//     //     }
 
 
 
