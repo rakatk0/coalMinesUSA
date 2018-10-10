@@ -59,7 +59,7 @@
       border-right-color: black;
     }
 
-    #about {
+    #sidebar {
       position: absolute;
       bottom: 20px;
       left: 20px;
@@ -80,11 +80,11 @@
       z-index: 800;
     }
 
-    #about h2 {
+    #sidebar h2 {
       margin: 6px 0 0;
     }
 
-    #about ul {
+    #sidebar ul {
       padding-left: 15px;
       font-size: .9em;
       line-height: 1.5em;
@@ -145,37 +145,28 @@
 <body>
   <header>
     <h1>Coal Mines Across the USA</h1>
-    <!-- <h2>Across the US in 2016</h2> -->
   </header>
 
   <div id='map'></div>
-  <section id="about">
-    <h2>About this map</h2>
-    <p>This is a map showing the distribution of
+  <section id="sidebar">
+    <h2>This map...</h2>
+    <p>...shows the distribution of
       <b><label style="color:#0c6577">Underground</label></b> and
-      <b><label style="color:#5d0a6e">Surface</label></b> Coal Mines across United States of America.</p>
-    <p>It was created using publicly available <a href="https://www.eia.gov/maps/layer_info-m.php">
-          US Energy Information Administration (EIA) & US Geological Survey (USGS) data from 2016</a>.</p>
-
-
-    <h3>Map by Ritchie Katko</h3>
+      <b><label style="color:#5d0a6e">Surface</label></b>
+      Coal Mines across the USA, as of 2016.</p>
+    <p>Please note this map was created using publicly available <a href="https://www.eia.gov/maps/layer_info-m.php">
+          US Energy Information Administration (EIA) & US Geological Survey (USGS) data from 2016 </a>, and it may not be accurate in 2018.</p>
     <p>Created in Fall 2018 for MAP 673 Final Project.</p>
     <ul>
       <li>Other projects on GitHub: <a href="https://github.com/rakatk0" target="_blank">rakatk0</a></li>
-      <li>Check out my <a href="http://www.mappery.com/map-of/Prospect1-New-Orleans-Biennial-Art-Map" target="_blank">Prospect 1 Map</a></li>
+      <li>Check out my <a href="http://www.mappery.com/map-of/Prospect1-New-Orleans-Biennial-Art-Map" target="_blank">Prospect 1 Map</a> from 2009.</li>
     </ul>
-
+    <p><b>Author: Ritchie Katko</b></p>
   </section>
-  <!-- <footer>
-    <p>Map authored by Ritchie Katko</p>
-    <p>Map produced for MAP 672 Final Project - Fall 2018</p>
-    <p>lorem ipsum</p>
-  </footer> -->
-
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/simple-statistics@6.1.0/dist/simple-statistics.min.js"></script>
+  <!-- <script src="https://unpkg.com/simple-statistics@6.1.0/dist/simple-statistics.min.js"></script> -->
 
   <script>
     // let's build a map!
@@ -205,7 +196,6 @@
     }));
 
 
-
   // Ajax call
 
     $.getJSON("data/allMinesUSA.geoJSON", function(data) {
@@ -215,7 +205,7 @@
       var commonStyles = {
         weight: 1,
         stroke: 1,
-        fillOpacity: .5
+        fillOpacity: .7
       }
       // sort features so largest are drawn first
       data.features.sort(function(a, b) {
