@@ -1,0 +1,665 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.283282,43.530769 ]
+    },
+    "properties": {
+    "rank":1,
+    "mineName":"North Antelope Rochelle Mine",
+    "operatingCompany":"Peabody Powder River Mining LLC",
+    "mineType":"Surface",
+    "state":"Wyoming",
+    "production":92863811
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.251829,43.67371 ]
+    },
+    "properties": {
+    "rank":2,
+    "mineName":"Black Thunder",
+    "operatingCompany":"Thunder Basin Coal Company LLC",
+    "mineType":"Surface",
+    "state":"Wyoming",
+    "production":67889779
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.33529,43.462133 ]
+    },
+    "properties": {
+    "rank":3,
+    "mineName":"Antelope Coal Mine",
+    "operatingCompany":"Antelope Coal LLC",
+    "mineType":"Surface",
+    "state":"Wyoming",
+    "production":29793257
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.515,44.387727 ]
+    },
+    "properties": {
+    "rank":4,
+    "mineName":"Eagle Butte Mine",
+    "operatingCompany":"Contura Coal West LLC",
+    "mineType":"Surface",
+    "state":"Wyoming",
+    "production":19003005
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "rank":5,
+    "mineName":"Cordero Rojo Mine",
+    "operatingCompany":"Cordero Mining LLC",
+    "mineType":"Surface",
+    "state":"Wyoming",
+    "production":18332046
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.355938,44.101563 ]
+    },
+    "properties": {
+    "rank":6,
+    "mineName":"Belle Ayr Mine",
+    "operatingCompany":"Contura Coal West LLC",
+    "mineType":"Surface",
+    "state":"Wyoming",
+    "production":14883227
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.843313,47.383563 ]
+    },
+    "properties": {
+    "rank":7,
+    "mineName":"Freedom Mine",
+    "operatingCompany":"The Coteau Properties Company",
+    "mineType":"Surface",
+    "state":"North Dakota",
+    "production":14109960
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.472563,39.918063 ]
+    },
+    "properties": {
+    "rank":8,
+    "mineName":"Bailey Mine",
+    "operatingCompany":"Consol Pennsylvania Coal Company",
+    "mineType":"Underground",
+    "state":"Pennsylvania",
+    "production":12056165
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.830459,37.838373 ]
+    },
+    "properties": {
+    "rank":9,
+    "mineName":"Mach #1 Mine",
+    "operatingCompany":"M-Class Mining LLC",
+    "mineType":"Underground",
+    "state":"Illinois",
+    "production":11443835
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.458843,44.405587 ]
+    },
+    "properties": {
+    "rank":10,
+    "mineName":"Caballo Mine",
+    "operatingCompany":"Peabody Caballo Mining LLC",
+    "mineType":" Surface",
+    "state":" Wyoming",
+    "production":11221557
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.7952,39.821318 ]
+    },
+    "properties": {
+    "rank":11,
+    "mineName":"Marshall County Mine",
+    "operatingCompany":"The Marshall County Coal Company",
+    "mineType":"Underground",
+    "state":"West Virginia",
+    "production":10523671
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.920485,45.127434 ]
+    },
+    "properties": {
+    "rank":12,
+    "mineName":"Spring Creek Coal Company",
+    "operatingCompany":"Spring Creek Coal LLC",
+    "mineType":" Surface",
+    "state":"Montana",
+    "production":10245081
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.356287,40.080451 ]
+    },
+    "properties": {
+    "rank":13,
+    "mineName":"Enlow Fork Mine",
+    "operatingCompany":"Consol Pennsylvania Coal Company",
+    "mineType":"Underground",
+    "state":"Pennsylvania",
+    "production":9638245
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.495041,31.284617 ]
+    },
+    "properties": {
+    "rank":14,
+    "mineName":"Kosse Strip",
+    "operatingCompany":"Luminant Mining Company LLC",
+    "mineType":"Surface",
+    "state":"Texas",
+    "production":9299300
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.674585,45.861246 ]
+    },
+    "properties": {
+    "rank":15,
+    "mineName":"Rosebud Mine&crusher/Conveyor",
+    "operatingCompany":"Western Energy Company",
+    "mineType":"Surface",
+    "state":"Montana",
+    "production":8812478
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.888202,37.743 ]
+    },
+    "properties": {
+    "rank":16,
+    "mineName":"River View Mine",
+    "operatingCompany":"River View Coal LLC",
+    "mineType":"Underground",
+    "state":"Kentucky",
+    "production":8607528
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.285297,43.972221 ]
+    },
+    "properties": {
+    "rank":17,
+    "mineName":"Coal Creek Mine",
+    "operatingCompany":"Thunder Basin Coal Company LLC",
+    "mineType":"Surface",
+    "state":"Wyoming",
+    "production":8179632
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.458929,44.405587 ]
+    },
+    "properties": {
+    "rank":18,
+    "mineName":"Rawhide Mine",
+    "operatingCompany":"Peabody Caballo Mining LLC",
+    "mineType":"Surface",
+    "state":"Wyoming",
+    "production":8079139
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.281316,39.001318 ]
+    },
+    "properties": {
+    "rank":19,
+    "mineName":"Bear Run Mine",
+    "operatingCompany":"Peabody Bear Run Mining LLC",
+    "mineType":"Surface",
+    "state":"Indiana",
+    "production":7283179
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.090149,47.468446 ]
+    },
+    "properties": {
+    "rank":20,
+    "mineName":"Falkirk Mine",
+    "operatingCompany":"Falkirk Mining Company",
+    "mineType":"Surface",
+    "state":"North Dakota",
+    "production":7248542
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.544071,44.456843 ]
+    },
+    "properties": {
+    "rank":21,
+    "mineName":"Buckskin Mine",
+    "operatingCompany":"Buckskin Mining Company",
+    "mineType":"Surface",
+    "state":"Wyoming",
+    "production":7130578
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.259398,30.370218 ]
+    },
+    "properties": {
+    "rank":22,
+    "mineName":"Three Oaks",
+    "operatingCompany":"Luminant Mining Company LLC",
+    "mineType":"Surface",
+    "state":"Texas",
+    "production":6983347
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.165213,39.795196 ]
+    },
+    "properties": {
+    "rank":23,
+    "mineName":"Cumberland Mine",
+    "operatingCompany":"Cumberland Contura LLC",
+    "mineType":"Underground",
+    "state":"Pennsylvania",
+    "production":6959706
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.657447,40.154907 ]
+    },
+    "properties": {
+    "rank":24,
+    "mineName":"Tunnel Ridge Mine",
+    "operatingCompany":"Tunnel Ridge LLC",
+    "mineType":"Underground",
+    "state":"West Virginia",
+    "production":6593227
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.425728,39.458153 ]
+    },
+    "properties": {
+    "rank":25,
+    "mineName":"Harrison County Mine",
+    "operatingCompany":"The Harrison County Coal Company",
+    "mineType":"Underground",
+    "state":"West Virginia",
+    "production":6586715
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.711191,40.00216 ]
+    },
+    "properties": {
+    "rank":26,
+    "mineName":"Ohio County Mine",
+    "operatingCompany":"The Ohio County Coal Company",
+    "mineType":"Underground",
+    "state":"West Virginia",
+    "production":6265878
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.390835,44.313292 ]
+    },
+    "properties": {
+    "rank":27,
+    "mineName":"Dry Fork Mine",
+    "operatingCompany":"Western Fuels-Wyoming Inc",
+    "mineType":"Surface",
+    "state":"Wyoming",
+    "production":6141433
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.66783,38.277987 ]
+    },
+    "properties": {
+    "rank":28,
+    "mineName":"Lively Grove Mine",
+    "operatingCompany":"Prairie State Generating Company",
+    "mineType":"Underground",
+    "state":"Illinois",
+    "production":5913129
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -108.42152,46.270289 ]
+    },
+    "properties": {
+    "rank":29,
+    "mineName":"Bull Mountains Mine No 1",
+    "operatingCompany":"Signal Peak Energy LLC",
+    "mineType":"Underground",
+    "state":"Montana",
+    "production":5609042
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -110.299851,36.443897 ]
+    },
+    "properties": {
+    "rank":30,
+    "mineName":"Kayenta Mine",
+    "operatingCompany":"Peabody Western Coal Company",
+    "mineType":"Surface",
+    "state":"Arizona",
+    "production":5422850
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.83111,37.838492 ]
+    },
+    "properties": {
+    "rank":31,
+    "mineName":"Mach #1 Mine",
+    "operatingCompany":"Mach Mining LLC",
+    "mineType":"Underground",
+    "state":"Illinois",
+    "production":5406820
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.417233,38.913827 ]
+    },
+    "properties": {
+    "rank":32,
+    "mineName":"Sufco",
+    "operatingCompany":"Canyon Fuel Company LLC",
+    "mineType":"Underground",
+    "state":"Utah",
+    "production":5375171
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.02346,39.894885 ]
+    },
+    "properties": {
+    "rank":33,
+    "mineName":"Century Mine",
+    "operatingCompany":"American Energy Corporation",
+    "mineType":"Underground",
+    "state":"Ohio",
+    "production":4983672
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.92603,37.211821 ]
+    },
+    "properties": {
+    "rank":34,
+    "mineName":"Buchanan Mine #1",
+    "operatingCompany":"Buchanan Minerals LLC",
+    "mineType":"Underground",
+    "state":"Virginia",
+    "production":4946468
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -107.872771,35.652792 ]
+    },
+    "properties": {
+    "rank":35,
+    "mineName":"El Segundo",
+    "operatingCompany":"El Segundo Coal Company LLC",
+    "mineType":"Surface",
+    "state":"New Mexico",
+    "production":4902936
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.203393,39.684559 ]
+    },
+    "properties": {
+    "rank":36,
+    "mineName":"Skyline Mine #3",
+    "operatingCompany":"Canyon Fuel Company LLC",
+    "mineType":"Underground",
+    "state":"Utah",
+    "production":4756924
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.327005,39.626187 ]
+    },
+    "properties": {
+    "rank":37,
+    "mineName":"Marion County Mine",
+    "operatingCompany":"The Marion County Coal Company",
+    "mineType":"Underground",
+    "state":"West Virginia",
+    "production":4370847
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -108.433789,36.794909 ]
+    },
+    "properties": {
+    "rank":38,
+    "mineName":"San Juan Mine 1",
+    "operatingCompany":"San Juan Coal Company",
+    "mineType":"Underground",
+    "state":"New Mexico",
+    "production":4330717
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.232927,47.071955 ]
+    },
+    "properties": {
+    "rank":39,
+    "mineName":"Center Mine",
+    "operatingCompany":"Bni Coal Ltd",
+    "mineType":"Surface",
+    "state":"North Dakota",
+    "production":4296307
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.518542,32.466675 ]
+    },
+    "properties": {
+    "rank":40,
+    "mineName":"South Hallsville No 1 Mine",
+    "operatingCompany":"The Sabine Mining Company",
+    "mineType":"Surface",
+    "state":"Texas",
+    "production":4186658
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "rank":41,
+    "mineName":"Absaloka Mine",
+    "operatingCompany":"Westmoreland Resources Inc",
+    "mineType":"Surface",
+    "state":"Montana",
+    "production":4157548
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -107.443136,38.92875 ]
+    },
+    "properties": {
+    "rank":42,
+    "mineName":"West Elk Mine",
+    "operatingCompany":"Mountain Coal Company LLC",
+    "mineType":"Underground",
+    "state":"Colorado",
+    "production":4156405
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -108.520096,36.565189 ]
+    },
+    "properties": {
+    "rank":43,
+    "mineName":"Navajo Mine",
+    "operatingCompany":"Bisti Fuels Company LLC",
+    "mineType":"Surface",
+    "state":"New Mexico",
+    "production":4107436
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -110.595847,41.765659 ]
+    },
+    "properties": {
+    "rank":44,
+    "mineName":"Kemmerer Mine",
+    "operatingCompany":"Westmoreland Kemmerer LLC",
+    "mineType":"Surface",
+    "state":"Wyoming",
+    "production":4105900
+    }
+  }
+]
+}
