@@ -10,8 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
 
   <style>
-    /* source css */
-
+  
     body {
       margin: 0;
       padding: 0;
@@ -104,7 +103,7 @@
       text-decoration: underline;
     }
 
-    .legend {
+    /* .legend {
       padding: 6px 8px;
       font-style: italic;
       font-weight: bold;
@@ -123,7 +122,7 @@
       content: '';
       display: block;
       clear: both;
-    }
+    } */
 
     .toolTipCSS {
       min-width: 200px;
@@ -152,8 +151,7 @@
     <h2>This map...</h2>
     <p>...shows the distribution of
       <b><label style="color:#0c6577">Underground</label></b> and
-      <b><label style="color:#5d0a6e">Surface</label></b>
-      Coal Mines across the USA, as of 2016.</p>
+      <b><label style="color:#5d0a6e">Surface</label></b> Coal Mines across the USA, as of 2016.</p>
     <p>Please note this map was created using publicly available <a href="https://www.eia.gov/maps/layer_info-m.php">
           US Energy Information Administration (EIA) & US Geological Survey (USGS) data from 2016 </a>, and it may not be accurate in 2018.</p>
     <p>Created in Fall 2018 for MAP 673 Final Project.</p>
@@ -180,7 +178,7 @@
     }
     var map = L.map('map', options);
 
-  // basemap
+    // basemap
     var tiles = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.{ext}', {
       attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       subdomains: 'abcd',
@@ -196,7 +194,7 @@
     }));
 
 
-  // Ajax call
+    // Ajax call
 
     $.getJSON("data/allMinesUSA.geoJSON", function(data) {
 
@@ -212,7 +210,7 @@
         return b.properties.tot_prod - a.properties.tot_prod;
       });
 
-    // break into layers
+      // break into layers
       // underground layer
 
       var underGroundLayer = L.geoJson(data, {
@@ -308,7 +306,7 @@
     // function to return a radius with an arbitrary scale factor
     function getRadius(val) {
       var radius = Math.sqrt(val * Math.PI);
-      return radius * .01;
+      return radius * .005;
     }
   </script>
 
