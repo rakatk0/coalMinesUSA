@@ -1,7 +1,7 @@
 # coalMinesUSA
 Author: Ritchie Katko
 
-The goal of this map is to compare 2 datasets thematically (coal beds and coal mines in the USA).  Data is publicly available.  
+The goal of this map is to show all coal mines in the US as of 2016.   Data is publicly available.  
 Map features:
 popup functionality on all features
 coal mines - point symbology scaled based on coal production, colored base on type of mine
