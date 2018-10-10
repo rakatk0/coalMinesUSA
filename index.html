@@ -3,229 +3,174 @@
 
 <head>
   <meta charset=utf-8 />
-  <title>Lab 09 Starter</title>
+  <title>USA Coal Mines 2016</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
-  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
 
   <style>
     /* source css */
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: Lato, sans-serif;
-			color: #3d3d3d;
-		}
-		h1 {
-			position: absolute;
-			margin-top: 0;
-			top: 10px;
-			left: 15px;
-			font-size: 2em;
-			font-family: Merriweather, serif;
-			letter-spacing: .04em;
-			padding: 10px 15px;
-			background: rgba(256, 256, 256, .7);
-			/* border: 1px solid grey; */
-			border-radius: 5px;
-			box-shadow: 0 0 15px rgba(0,0,0,0.2);
-			z-index: 800;
-		}
-		h2 {
-			font-family: Merriweather, serif;
-			font-size: 1.3em;
-			letter-spacing: .04em;
-		}
 
-		#map {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			width: 100%;
-			border-style: inset;
-			border-color: gold;
-			border-width: thin;
-			border-top-color: skyblue;
-			border-right-color: skyblue;
-		}
-
-		#about {
-			position: absolute;
-			bottom: 20px;
-			left: 15px;
-			width: 250px;
-			padding: 0 15px;
-			background: rgba(256, 256, 256, .7);
-			/* border: 1px solid; */
-			border-radius: 5px;
-			z-index: 800;
-			box-shadow: 0 0 15px rgba(0,0,0,0.2);
-		}
-
-		#title {
-			position: relative;
-			margin-top: 0;
-			top: 10px;
-			left: 15px;
-			z-index: 800;
-		}
-
-		#about h2 {
-			margin: 6px 0 0;
-		}
-
-		#about ul {
-			padding-left: 15px;
-			font-size: .9em;
-			line-height: 1.5em;
-		}
-
-		p {
-			font-size: .9em;
-			line-height: 1.5em;
-		}
-		a {
-			color: #005daa;
-			text-decoration: none;
-		}
-		a:hover {
-			text-decoration: underline;
-		}
-
-		.legend {
-        padding: 6px 8px;
-				font-style: italic;
-				font-weight: bold;
-				text-shadow: 2px 2px 2px #d3d3d3;
-        background: rgba(255,255,255,0.7);
-        box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        border-radius: 5px;
-    }
-    .legend label {
-        font-size: 1.2em;
-				font-style: italic bold;
-    }
-    .legend label:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
-
-		.toolTipCSS {
-			min-width: 200px;
-			max-width: 300px;
-			display: inline-block;
-			white-space: normal;
-		}
-
-		.toolTipCSS h3 {
-			font-size: 1.2em;
-			font-family: Merriweather, serif;
-			margin-bottom:0px;
-		}
-
-    /* body {
+    body {
       margin: 0;
       padding: 0;
-      background: whitesmoke;
-      font-family: Lato, sans-serif;
-      color: #0D0000;
-    }
-
-    header {
-      width: 80%;
-      margin: 10px auto 10px auto;
+      font-family: 'Roboto', sans-serif;
+      color: #3d3d3d;
     }
 
     h1 {
-      display: inline-block;
-      margin-right: 20px;
-      color: #001323;
+      position: absolute;
+      margin-top: 0;
+      top: 20px;
+      left: 20px;
+      font-size: 2em;
+      font-family: 'Roboto Condensed', sans-serif;
+      letter-spacing: .04em;
+      padding: 10px 15px;
+      background: rgba(256, 256, 256, .7);
+      /* border: 1px solid grey; */
+      border-radius: 5px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      z-index: 800;
     }
 
     h2 {
-      display: inline-block;
-      color: #001323;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 1.3em;
+      letter-spacing: .04em;
+    }
+
+    h3 {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 1em;
+      letter-spacing: .04em;
     }
 
     #map {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			width: 100%;
-			/* border-style: inset;
-			border-color: gold;
-			border-width: thin;
-			border-top-color: skyblue;
-			border-right-color: skyblue;
-		}
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      border-style: inset;
+      border-color: black;
+      border-width: thick;
+      border-top-color: black;
+      border-right-color: black;
+    }
 
-    footer {
-      padding: 6px 10%;
-      width: 80%;
+    #about {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      width: 300px;
+      padding: 0 15px;
+      background: rgba(256, 256, 256, .7);
+      /* border: 1px solid; */
+      border-radius: 5px;
+      z-index: 800;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #title {
+      position: relative;
+      margin-top: 0;
+      top: 10px;
+      left: 15px;
+      z-index: 800;
+    }
+
+    #about h2 {
+      margin: 6px 0 0;
+    }
+
+    #about ul {
+      padding-left: 15px;
+      font-size: .9em;
+      line-height: 1.5em;
     }
 
     p {
-      font-size: 1em;
-      color: #001323;
+      font-size: .9em;
+      line-height: 1.5em;
     }
+
+    a {
+      color: #005daa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     .legend {
       padding: 6px 8px;
-      font-size: 1em;
-      background: rgba(255,255,255,0.8);
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      font-style: italic;
+      font-weight: bold;
+      text-shadow: 2px 2px 2px #d3d3d3;
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
       border-radius: 5px;
     }
-    .legend h3 {
-      font-size: 1.1em;
-      font-weight: normal;
-      color: #001323;
-      margin: 0 0 10px 0;
-    }
-    .legend span {
-      width: 20px;
-      height: 20px;
-      float: left;
-      margin: 0 10px 4px 0;
-    }
+
     .legend label {
-      font-size: 1.1em;
+      font-size: 1.2em;
+      font-style: italic bold;
     }
+
     .legend label:after {
       content: '';
       display: block;
-      clear: both;*/
+      clear: both;
+    }
+
+    .toolTipCSS {
+      min-width: 200px;
+      max-width: 300px;
+      display: inline-block;
+      white-space: normal;
+    }
+
+    .toolTipCSS h3 {
+      font-size: 1.2em;
+      font-family: 'Roboto Condensed', sans-serif;
+      margin-bottom: 0px;
+    }
+
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Coal Mines</h1>
-    <h2>Across the US in 2016</h2>
+    <h1>Coal Mines Across the USA</h1>
+    <!-- <h2>Across the US in 2016</h2> -->
   </header>
 
   <div id='map'></div>
   <section id="about">
-      <h2>About this map</h2>
-  		<p>This is a map about coal.</p>
-  		<p>Using publicly available EIA & USGS data <a href="https://brucehaupt.github.io/my-final-project-repo/">EIA data</a> that I created in June 2018.</p>
+    <h2>About this map</h2>
+    <p>This is a map showing the distribution of
+      <b><label style="color:#0c6577">Underground</label></b> and
+      <b><label style="color:#5d0a6e">Surface</label></b> Coal Mines across United States of America.</p>
+    <p>It was created using publicly available <a href="https://www.eia.gov/maps/layer_info-m.php">
+          US Energy Information Administration (EIA) & US Geological Survey (USGS) data from 2016</a>.</p>
 
 
-      <h2>Map by Ritchie Katko</h2>
-      <ul>
-        <li>See my projects on GitHub: <a href="https://github.com/rakatk0" target="_blank">rakatk0</a></li>
-        <li>Follow me on twitter: <a href="https://twitter.com/brucehaupt" target="_blank">@ritchiekatko</a></li>
-        <li>Check out my <a href="http://www.mappery.com/map-of/Prospect1-New-Orleans-Biennial-Art-Map" target="_blank">Prospect 1 Map</a></li>
-      </ul>
+    <h3>Map by Ritchie Katko</h3>
+    <p>Created in Fall 2018 for MAP 673 Final Project.</p>
+    <ul>
+      <li>Other projects on GitHub: <a href="https://github.com/rakatk0" target="_blank">rakatk0</a></li>
+      <li>Check out my <a href="http://www.mappery.com/map-of/Prospect1-New-Orleans-Biennial-Art-Map" target="_blank">Prospect 1 Map</a></li>
+    </ul>
 
-    </section>
-  <footer>
+  </section>
+  <!-- <footer>
     <p>Map authored by Ritchie Katko</p>
     <p>Map produced for MAP 672 Final Project - Fall 2018</p>
     <p>lorem ipsum</p>
-  </footer>
+  </footer> -->
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -233,244 +178,148 @@
   <script src="https://unpkg.com/simple-statistics@6.1.0/dist/simple-statistics.min.js"></script>
 
   <script>
-  // let's build a map!
+    // let's build a map!
 
-  // instantiate leaflet map
-  var options = {
-    center: [39.82, -98.57],
-    zoom: 5.7,
-    zoomSnap: .1,
-    zoomControl: false
-  }
-  var map = L.map('map', options);
+    // instantiate leaflet map
+    var options = {
+      center: [39.82, -98.57],
+      zoom: 5.7,
+      zoomSnap: .1,
+      zoomControl: false
+    }
+    var map = L.map('map', options);
 
   // basemap
-  var tiles = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map)
+    var tiles = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.{ext}', {
+      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      subdomains: 'abcd',
+      minZoom: 0,
+      maxZoom: 18,
+      ext: 'png'
+    });
+    tiles.addTo(map)
 
-  // add zoom controls to right side of map
-  map.addControl( L.control.zoom({ position: 'topright' }));
-
-// // global variables
-//   var rentalValue = "RENT",
-//     countyValue = "NAME";
-
-// load geoJson and draw map using jQuery's getJSON() method
-// load data into the document using jQuery's getJSON() method
-$.getJSON("data/allMinesUSA.geoJSON", function(data) {
-
-    // you need to know what the min value is,
-        // calculated at runtime or prior
-        var minValue = 8;
-
-        //  minimum desired radius size of circles
-        var minRadius = 4;
-
-        var minesLayer =   L.geoJson(data, {
-            pointToLayer: function(feature, ll){
-                return L.circleMarker(ll, {
-                    color: '#ff7900',
-                    opacity: 1,
-                    weight: 2,
-                    fillColor: '#ff7900',
-                    fillOpacity: .6,
-                    //radius: 10
-                    radius: calcRadius(feature.properties.tot_prod)
-                });
-            }
-          //   onEachFeature: function(feature, layer) {
-          //     //call tooltip function
-          //     layer.bindPopup(getTooltip(feature, layer));
-          //
-          //     // add ui feedback when hovering over points
-          //     layer.on('mouseover', function() {
-          //       layer.setStyle({
-          //         color: '#ef9847',
-          //         fillColor: '#efc847'
-          //       });
-          //     });
-          //     layer.on('mouseout', function() {
-          //       layer.setStyle({
-          //         color: '#3a5e96',
-          //         fillColor: '#5583cc'
-          //       });
-          //     });
-          //
-          //   }
-          // }
-
-        }).addTo(map);
-
-            // call to new function here gets the data out of the
-            // callback function
-            drawMap(dataLayer);
-
-
-            // Radius formula
-
-            function getRadius (tot_prod) {
-            	var radius = (tot_prod * 3) + 4;
-            	return radius;
+    // add zoom controls to right side of map
+    map.addControl(L.control.zoom({
+      position: 'topright'
+    }));
 
 
 
+  // Ajax call
 
-    // declare and define drawMap function outside getJSON functions callback function.
-      function drawMap(dataLayer) {
+    $.getJSON("data/allMinesUSA.geoJSON", function(data) {
 
 
-        dataLayer.eachLayer(function(layer) {
+      // set common styles
+      var commonStyles = {
+        weight: 1,
+        stroke: 1,
+        fillOpacity: .5
+      }
+      // sort features so largest are drawn first
+      data.features.sort(function(a, b) {
+        return b.properties.tot_prod - a.properties.tot_prod;
+      });
 
-          var props = layer.feature.properties;
+    // break into layers
+      // underground layer
 
-          layer.setStyle({
-            fillColor: getColor(props[rentalValue], breaks)
+      var underGroundLayer = L.geoJson(data, {
+
+        pointToLayer: function(feature, latlng) {
+          return L.circleMarker(latlng, commonStyles);
+        },
+
+        filter: function(feature) {
+          if (feature.properties.type_ == "Underground") {
+            return feature;
+          }
+        },
+
+        style: function(feature) {
+          return {
+            color: '#ff8a8a',
+            fillColor: '#0c6577',
+            radius: getRadius(feature.properties.tot_prod)
+          }
+        },
+        // mouseover functionality / affordance
+        onEachFeature: function(feature, layer) {
+          layer.on('mouseover', function() {
+            layer.setStyle({
+              fillColor: 'red'
+            });
           });
+          layer.on('mouseout', function() {
+            layer.setStyle({
+              fillColor: '#0c6577'
+            });
+          });
+          // concatenate tooltip text
+          layer.bindTooltip("<h2>" + feature.properties.name + "</h2>" +
+            "<h3> Location: </h3>" + feature.properties.county + " County" +
+            "<h3> Mine Type: </h3>" + feature.properties.type_ +
+            "<h3>Total Production: </h3>" + feature.properties.tot_prod + " short tons", {
+              className: 'toolTipCSS'
+            });
+        }
 
-        });
-        drawLegend(breaks);
+      }).addTo(map);
+
+
+      // SURFACE LAYER
+
+      var surfaceLayer = L.geoJson(data, {
+
+        pointToLayer: function(feature, latlng) {
+          return L.circleMarker(latlng, commonStyles);
+        },
+
+        filter: function(feature) {
+          if (feature.properties.type_ == "Surface") {
+            return feature;
+          }
+        },
+
+        style: function(feature) {
+          return {
+            color: '#ff8a8a',
+            fillColor: '#5d0a6e',
+            radius: getRadius(feature.properties.tot_prod)
+          }
+        },
+        // mouseover functionality / affordance
+        onEachFeature: function(feature, layer) {
+          layer.on('mouseover', function() {
+            layer.setStyle({
+              fillColor: 'red'
+            });
+          });
+          layer.on('mouseout', function() {
+            layer.setStyle({
+              fillColor: '#5d0a6e'
+            });
+          });
+          // concatenate tooltip text
+          layer.bindTooltip("<h2>" + feature.properties.name + "</h2>" +
+            "<h3> Location: </h3>" + feature.properties.county + " County" +
+            "<h3> Mine Type: </h3>" + feature.properties.type_ +
+            "<h3>Total Production: </h3>" + feature.properties.tot_prod + " short tons", {
+              className: 'toolTipCSS'
+            });
+        }
+
+      }).addTo(map);
+    })
+
+    // END ajax call
+
+    // function to return a radius with an arbitrary scale factor
+    function getRadius(val) {
+      var radius = Math.sqrt(val * Math.PI);
+      return radius * .01;
     }
-
-//     // determine classBreaks
-//
-//     function getClassBreaks(dataLayer) {
-//
-//       // create empty Array for storing values
-//       var values = [];
-//
-//       // loop through all the counties
-//       dataLayer.eachLayer(function(layer) {
-//         var props = layer.feature.properties;
-//         var value = props[rentalValue];
-//         if(value != null) { values.push(value) };
-//       });
-//
-//       // determine similar clusters
-//       var clusters = ss.ckmeans(values, 5);
-//
-//       // create an array of the lowest value within each cluster
-//       var breaks = clusters.map(function(cluster){
-//         return [cluster[0],cluster.pop()];
-//       });
-//     console.log(breaks);
-//       return breaks; // return Array of class breaks
-//     }
-//     // END getClassBreaks DEFINITION
-//
-//     // DEFINE getColor
-//
-//     // function getColor(d, breaks) {
-//     //
-//     //   if(d <= breaks[0][1]) { // less than $599
-//     //         return '#f1eef6';
-//     //     } else if(d <= breaks[1][1]) { // less than $740
-//     //         return '#bdc9e1';
-//     //     } else if(d <= breaks[2][1]) { // // less than $926
-//     //         return '#74a9cf';
-//     //     } else if(d <= breaks[3][1]) {  // less than $1220
-//     //         return '#2b8cbe'
-//     //     } else if(d <= breaks[4][1]) { // less than $1827
-//     //         return '#045a8d'
-//     //     }
-//     // } // END getColor
-//
-// // HARD CODED breaks values to get it to work
-// // not sure what the issue was...problematic code above
-// // hard coded solution below
-//
-//       function getColor(d) {
-//
-//         if(d <= 599) { // less than $599
-//               return '#f1eef6';
-//           } else if(d <= 740) { // less than $740
-//               return '#bdc9e1';
-//           } else if(d <= 926) { // // less than $926
-//               return '#74a9cf';
-//           } else if(d <= 1220) {  // less than $1220
-//               return '#2b8cbe'
-//           } else if(d <= 1827) { // less than $1827
-//               return '#045a8d'
-//           }
-//       } // END getColor
-//
-//     // LEGEND BELOW
-//
-//     function drawLegend(breaks){
-//
-//         // create a new Leaflet control object, and position it top left
-//         var legend = L.control({position: 'topleft'});
-//
-//         // when the legend is added to the map
-//         legend.onAdd = function () {
-//
-//             // create a new HTML <div> element and give it a class name of "legend"
-//             var div = L.DomUtil.create('div', 'legend');
-//
-//             // first append an <h3> tag to the div holding the current attribute
-//             // and norm values (i.e., the mapped phenomena)
-//             div.innerHTML = "<h3>" + "Average Rental Price" + "</h3>";
-//
-//             // for each of our breaks
-//             for (var i = 0; i < breaks.length; i++) {
-//
-//                 // determine the color associated with each break value,
-//                 // including the lower range value
-//                 var color = getColor(breaks[i][0], breaks);
-//                 console.log(color);
-//
-//                 // concatenate a <span> tag styled with the color and the range values
-//                 // of that class and include a label with the low and a high ends of that class range
-//                 div.innerHTML +=
-//                     '<span style="background:' + color + '"></span> ' +
-//                     '<label>$'+(breaks[i][0]).toLocaleString() + ' &mdash; ' +
-//                     (breaks[i][1]).toLocaleString() + '</label>';
-//             }
-//
-//             // return the populated div to be added to the map
-//             return div;
-//         };
-//
-//         // add the legend to the map
-//         legend.addTo(map);
-//     }
-//
-//     dataLayer.eachLayer(function(layer) {
-//
-//       var props = layer.feature.properties;
-//
-//       layer.setStyle({
-//         fillColor: getColor(props[rentalValue], breaks)
-//       });
-//
-//     });
-//     drawLegend(breaks);
-//
-//
-//     // legend above
-//
-//
-//     // // POPUP CONSTRUCTION
-//     // // basic popup style
-//     //
-//     //     var commonStyles = {
-//     //       weight: 1,
-//     //       stroke: 1,
-//     //       fillOpacity: .8
-//     //     }
-
-
-
-
-
-
-
-
-
-
-
-});
   </script>
 
 </body>
